@@ -1,0 +1,11 @@
+<%= form_tag post_path(@post), method: "put" do %>
+    <!--post_path(@post) is making the request to the post/:id action -->
+  <label>Post title:</label><br>
+  <%= text_field_tag :title, @post.title %><br>
+
+  <label>Post Description</label><br>
+  <%= text_area_tag :description, @post.description %><br>
+<!-- puts label next to an empty text field. text field fill in = value for the stated :key in params -->
+<!--text_area_tag :key, @instance.getter_method prepopulates the text field with the current instances attributes -->
+  <%= submit_tag "Submit Post" %>
+<% end %>
